@@ -97,6 +97,7 @@
                         <outlet property="X4" destination="l3s-Ed-PDh" id="X5l-WZ-OEn"/>
                         <outlet property="X5" destination="TJ5-Kt-VtZ" id="uyT-2f-g7c"/>
                         <outlet property="change" destination="trE-HU-OST" id="gFp-19-e6A"/>
+                        <outlet property="resetbutton" destination="Wmo-pd-ekq" id="GXg-Ma-T7i"/>
                         <outlet property="textentry" destination="Gu0-ux-VC6" id="wJF-aU-nMD"/>
                     </connections>
                 </viewController>
