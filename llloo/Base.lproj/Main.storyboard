@@ -74,6 +74,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYz-V9-7c4" userLabel="words">
+                                <rect key="frame" x="116" y="526" width="157" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmo-pd-ekq">
                                 <rect key="frame" x="16" y="18" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -86,7 +93,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.87835104695431476" green="0.067165666117348741" blue="0.052260281369685142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -97,6 +104,7 @@
                         <outlet property="X4" destination="l3s-Ed-PDh" id="X5l-WZ-OEn"/>
                         <outlet property="X5" destination="TJ5-Kt-VtZ" id="uyT-2f-g7c"/>
                         <outlet property="change" destination="trE-HU-OST" id="gFp-19-e6A"/>
+                        <outlet property="output" destination="VYz-V9-7c4" id="nBF-Gr-J50"/>
                         <outlet property="resetbutton" destination="Wmo-pd-ekq" id="GXg-Ma-T7i"/>
                         <outlet property="textentry" destination="Gu0-ux-VC6" id="wJF-aU-nMD"/>
                     </connections>

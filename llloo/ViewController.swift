@@ -20,6 +20,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var PictureToBeChanged: UIImageView!
     @IBOutlet weak var change: UILabel!
     @IBOutlet weak var resetbutton: UIButton!
+    
+    @IBOutlet weak var output: UILabel!
     var backgroundmusicplayer = AVAudioPlayer()
     var Phrases = ["which","there","their","about","would","these","other","words","could","write","first","water","after","where","right","think","three","years","place","sound","great","ADORE", "AGILE", "AGREE", "ALERT", "ALIVE", "ALLOW", "ALOHA", "AMAZE", "AMITY", "AMPLE", "AMPLY", "AMUSE", "ANGEL", "ARDOR", "AWARE","Taner","Sucks","Natap", "Darius","Drake"]
     var Imagesets = ["Hang_00","Hang_01","Hang_02","Hang_03","Hang_04","Hang_05","Hang_06","Hang_07"]
@@ -29,8 +31,21 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         textentry.delegate = self
-        playBackgroundmusic(fileNamed: "saxman.mp3")
+        let randomIndex = Int(arc4random_uniform(UInt32(Phrases.count)))
+        randomItem = Phrases[randomIndex].uppercased()
+        PictureToBeChanged.image = UIImage(named: Imagesets[1]);
+        print(randomItem)
+        textentry.isUserInteractionEnabled = true
+        output.text = ""
+        X1.text = "X"
+        X2.text = "X"
+        X3.text = "X"
+        X4.text = "X"
+        X5.text = "X"
+        livesCheck = 1
+        playBackgroundmusic(fileNamed: "Titan.mp3")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -49,9 +64,11 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBAction func buttonPressed(sender: AnyObject)
     {
         let randomIndex = Int(arc4random_uniform(UInt32(Phrases.count)))
-        randomItem = Phrases[randomIndex].lowercased()
+        randomItem = Phrases[randomIndex].uppercased()
         PictureToBeChanged.image = UIImage(named: Imagesets[1]);
+        //print(randomItem)
         textentry.isUserInteractionEnabled = true
+        output.text = ""
         X1.text = "X"
         X2.text = "X"
         X3.text = "X"
@@ -65,35 +82,38 @@ class ViewController: UIViewController,UITextFieldDelegate {
         //*****
     }
     @IBAction func EventTriggered(_ sender: Any) {
+            resetbutton.setTitle("Reset", for: .normal)
             let text: String = textentry.text!
-            var chars = [Character](text)
+            var chars = [Character](text.uppercased())
             var charholder = [Character](randomItem)
             if(randomItem.contains(chars[0]))
             {
                 if(charholder[0] == chars[0])
                 {
-                    X1.text = text
+                    X1.text = text.uppercased()
                 }
                 if(charholder[1] == chars[0])
                 {
-                    X2.text = text
+                    X2.text = text.uppercased()
                 }
                 if(charholder[2] == chars[0])
                 {
-                    X3.text = text
+                    X3.text = text.uppercased()
                 }
                 if(charholder[3] == chars[0])
                 {
-                    X4.text = text
+                    X4.text = text.uppercased()
                 }
                 if(charholder[4] == chars[0])
                 {
-                    X5.text = text
+                    X5.text = text.uppercased()
                 }
                 textentry.text = nil
                 if(X1.text != "X" && X2.text != "X" && X3.text != "X" && X4.text != "X" && X5.text != "X")
                 {
                     change.text = "You Win"
+                    output.text = "Word: " + randomItem.uppercased()
+                    
                     resetbutton.setTitle("Reset", for: .normal)
                     textentry.isUserInteractionEnabled = false
                 }
@@ -109,6 +129,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
                 else
                 {
                     change.text = "You Lose"
+                    output.text = "Word: " + randomItem.uppercased()
                     resetbutton.setTitle("Reset", for: .normal)
                     textentry.isUserInteractionEnabled = false
                 }
