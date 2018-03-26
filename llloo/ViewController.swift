@@ -21,6 +21,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var change: UILabel!
     @IBOutlet weak var resetbutton: UIButton!
     
+    @IBOutlet var changethebackgroundcolor: UIView!
     @IBOutlet weak var output: UILabel!
     var backgroundmusicplayer = AVAudioPlayer()
     var Phrases = ["which","there","their","about","would","these","other","words","could","write","first","water","after","where","right","think","three","years","place","sound","great","ADORE", "AGILE", "AGREE", "ALERT", "ALIVE", "ALLOW", "ALOHA", "AMAZE", "AMITY", "AMPLE", "AMPLY", "AMUSE", "ANGEL", "ARDOR", "AWARE","Taner","Sucks","Natap", "Darius","Drake"]
@@ -29,7 +30,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     var phrase_check = ""
     var randomItem = ""
     var randomsongChoice = ["Titan.mp3","saxman.mp3"]
-    
+    var randomsongColor = [UIColor.blue,UIColor.red,UIColor.green,UIColor.yellow,UIColor.gray]
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -48,6 +49,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
         livesCheck = 1
         let ran = Int(arc4random_uniform(UInt32(randomsongChoice.count)))
         playBackgroundmusic(fileNamed: randomsongChoice[ran])
+        change.text = "Hangman"
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -88,6 +91,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
             let text: String = textentry.text!
             var chars = [Character](text.uppercased())
             var charholder = [Character](randomItem)
+        let go = Int(arc4random_uniform(UInt32(randomsongColor.count)))
+        changethebackgroundcolor.backgroundColor = randomsongColor[go]
             if(randomItem.contains(chars[0]))
             {
                 if(charholder[0] == chars[0])
@@ -118,6 +123,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
                     
                     resetbutton.setTitle("Reset", for: .normal)
                     textentry.isUserInteractionEnabled = false
+                    livesCheck = 1
                 }
             }
             else
@@ -134,6 +140,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
                     output.text = "Word: " + randomItem.uppercased()
                     resetbutton.setTitle("Reset", for: .normal)
                     textentry.isUserInteractionEnabled = false
+                    livesCheck = 1
                 }
             }
         }

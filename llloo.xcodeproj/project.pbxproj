@@ -15,7 +15,7 @@
 		1BE75A8120683C0F0046A3BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE75A7F20683C0F0046A3BB /* LaunchScreen.storyboard */; };
 		1BE75A8C20683C0F0046A3BB /* lllooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE75A8B20683C0F0046A3BB /* lllooTests.swift */; };
 		1BE75A9720683C100046A3BB /* lllooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE75A9620683C100046A3BB /* lllooUITests.swift */; };
-		530F81CA20698CF000512CC8 /* Titan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 530F81C920698CF000512CC8 /* Titan.mp3 */; };
+		530F81CC2069913900512CC8 /* Titan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 530F81CB2069913900512CC8 /* Titan.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		1BE75A9220683C0F0046A3BB /* lllooUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lllooUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE75A9620683C100046A3BB /* lllooUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lllooUITests.swift; sourceTree = "<group>"; };
 		1BE75A9820683C100046A3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		530F81C920698CF000512CC8 /* Titan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Titan.mp3; path = ../../../Downloads/Titan.mp3; sourceTree = "<group>"; };
+		530F81CB2069913900512CC8 /* Titan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Titan.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 				1BE75A7F20683C0F0046A3BB /* LaunchScreen.storyboard */,
 				1BE75A8220683C0F0046A3BB /* Info.plist */,
 				1BE7266D20696ACF00526D23 /* saxman.mp3 */,
-				530F81C920698CF000512CC8 /* Titan.mp3 */,
+				530F81CB2069913900512CC8 /* Titan.mp3 */,
 			);
 			path = llloo;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 				1BE7266E20696ACF00526D23 /* saxman.mp3 in Resources */,
 				1BE75A8120683C0F0046A3BB /* LaunchScreen.storyboard in Resources */,
 				1BE75A7E20683C0F0046A3BB /* Assets.xcassets in Resources */,
-				530F81CA20698CF000512CC8 /* Titan.mp3 in Resources */,
+				530F81CC2069913900512CC8 /* Titan.mp3 in Resources */,
 				1BE75A7C20683C0F0046A3BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
