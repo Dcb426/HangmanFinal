@@ -28,6 +28,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     var livesCheck = 1
     var phrase_check = ""
     var randomItem = ""
+    var randomsongChoice = ["Titan.mp3","saxman.mp3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,13 +40,14 @@ class ViewController: UIViewController,UITextFieldDelegate {
         print(randomItem)
         textentry.isUserInteractionEnabled = true
         output.text = ""
-        X1.text = "X"
-        X2.text = "X"
-        X3.text = "X"
-        X4.text = "X"
-        X5.text = "X"
+        X1.text = "?"
+        X2.text = "?"
+        X3.text = "?"
+        X4.text = "?"
+        X5.text = "?"
         livesCheck = 1
-        playBackgroundmusic(fileNamed: "Titan.mp3")
+        let ran = Int(arc4random_uniform(UInt32(randomsongChoice.count)))
+        playBackgroundmusic(fileNamed: randomsongChoice[ran])
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -69,11 +71,11 @@ class ViewController: UIViewController,UITextFieldDelegate {
         //print(randomItem)
         textentry.isUserInteractionEnabled = true
         output.text = ""
-        X1.text = "X"
-        X2.text = "X"
-        X3.text = "X"
-        X4.text = "X"
-        X5.text = "X"
+        X1.text = "?"
+        X2.text = "?"
+        X3.text = "?"
+        X4.text = "?"
+        X5.text = "?"
         livesCheck = 1
         resetbutton.setTitle("Start", for: .normal)
         //change.text = randomItem
@@ -109,7 +111,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
                     X5.text = text.uppercased()
                 }
                 textentry.text = nil
-                if(X1.text != "X" && X2.text != "X" && X3.text != "X" && X4.text != "X" && X5.text != "X")
+                if(X1.text != "?" && X2.text != "?" && X3.text != "?" && X4.text != "?" && X5.text != "?")
                 {
                     change.text = "You Win"
                     output.text = "Word: " + randomItem.uppercased()
